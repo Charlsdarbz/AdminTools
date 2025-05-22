@@ -12,8 +12,7 @@ public final class Admintools extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        getConfig().options().copyDefaults(true);
-        saveDefaultConfig();
+        saveConfig();
 
         prefix = ChatColor.translateAlternateColorCodes('&',
                 getConfig().getString("prefix", "&6[&bAdminTools&6]&r"));
@@ -23,6 +22,9 @@ public final class Admintools extends JavaPlugin {
         getCommand("Freeze").setExecutor(new Freeze());
         getCommand("Vanish").setExecutor(new Vanish(this));
         getCommand("Broadcast").setExecutor(new Broadcast());
+        getCommand("ItemCreate").setExecutor(new ItemCreate());
+
+        getCommand("ItemCreate").setTabCompleter(new ItemCreateTabCompleter());
 
         getServer().getPluginManager().registerEvents(new FreezeListener(), this);
     }

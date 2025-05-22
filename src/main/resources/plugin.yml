@@ -9,6 +9,7 @@ commands:
     Permission: op
   Broadcast:
     permission: op
-  onemace:
+  ItemCreate:
     permission: op
+
 

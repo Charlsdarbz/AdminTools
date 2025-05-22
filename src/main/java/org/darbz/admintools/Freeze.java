@@ -43,7 +43,7 @@ public class Freeze implements CommandExecutor {
 
                 if (!Frozen.contains(target.getUniqueId())) {
                     Frozen.add(target.getUniqueId());
-                    target.sendMessage(prefix + ChatColor.RED + " You Have Been" + ChatColor.AQUA + " Frozen " + ChatColor.RED + player.getName());
+                    target.sendMessage(prefix + ChatColor.RED + " You Have Been" + ChatColor.AQUA + " Frozen By " + ChatColor.RED + player.getName());
                     player.sendMessage(prefix + ChatColor.GRAY + " You have frozen " + playername);
                 } else {
                     Frozen.remove(target.getUniqueId());
