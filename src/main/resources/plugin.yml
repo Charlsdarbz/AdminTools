@@ -11,5 +11,9 @@ commands:
     permission: op
   ItemCreate:
     permission: op
+  Heal:
+    permission: op
+  Pvp:
+    permission: op
 
 

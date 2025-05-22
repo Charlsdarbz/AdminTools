@@ -13,8 +13,6 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.Collections;
 
-import static org.bukkit.enchantments.Enchantment.MENDING;
-
 public class ItemCreate implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
@@ -28,8 +26,6 @@ public class ItemCreate implements CommandExecutor {
                     meta.setLore(Collections.singletonList(args[2]));
                     meta.setCustomModelData(Integer.valueOf(args[1]));
                     int maxStackSize = Integer.valueOf(args[3]);
-                    meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_ENCHANTS);
-                    meta.addEnchant(Enchantment.MENDING, 1, true);
                     meta.setMaxStackSize(maxStackSize);
 
                     item.setItemMeta(meta);

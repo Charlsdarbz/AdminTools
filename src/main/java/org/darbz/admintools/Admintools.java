@@ -6,7 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class Admintools extends JavaPlugin {
 
     private static Admintools instance;
-    private static String prefix;
+    public static String prefix;
 
     @Override
     public void onEnable() {
@@ -23,10 +23,13 @@ public final class Admintools extends JavaPlugin {
         getCommand("Vanish").setExecutor(new Vanish(this));
         getCommand("Broadcast").setExecutor(new Broadcast());
         getCommand("ItemCreate").setExecutor(new ItemCreate());
+        getCommand("Heal").setExecutor(new Heal());
+        getCommand("Pvp").setExecutor(new pvptoggle());
 
         getCommand("ItemCreate").setTabCompleter(new ItemCreateTabCompleter());
 
         getServer().getPluginManager().registerEvents(new FreezeListener(), this);
+        getServer().getPluginManager().registerEvents(new pvplistener(), this);
     }
 
     @Override
