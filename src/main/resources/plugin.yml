@@ -1,0 +1,14 @@
+name: admintools
+version: 'v1'
+main: org.darbz.admintools.Admintools
+api-version: '1.21'
+commands:
+  Freeze:
+    permission: op
+  Vanish:
+    Permission: op
+  Broadcast:
+    permission: op
+  onemace:
+    permission: op
+
