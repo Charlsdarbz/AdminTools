@@ -15,5 +15,11 @@ commands:
     permission: op
   Pvp:
     permission: op
+  effect_checker:
+    permission: op
+  tempban:
+    permission: op
+  fly:
+    permission: op
 
 
