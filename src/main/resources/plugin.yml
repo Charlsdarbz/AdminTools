@@ -2,6 +2,8 @@ name: admintools
 version: 'v1'
 main: org.darbz.admintools.Admintools
 api-version: '1.21'
+description: The best plugin for server moderation | Made By Darbz.
+author: Darbz/Darbz#6425 <-- Discord
 commands:
   Freeze:
     permission: op
